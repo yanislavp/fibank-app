@@ -9,7 +9,7 @@ export const validateCredentialField = (value: string): FieldError => {
   const trimmed = value.trim();
 
   if (trimmed.length === 0) {
-    return 'This field is required.';
+    return "This field is required.";
   }
   if (trimmed.length < CREDENTIAL_MIN_LENGTH) {
     return `Must be at least ${CREDENTIAL_MIN_LENGTH} characters.`;

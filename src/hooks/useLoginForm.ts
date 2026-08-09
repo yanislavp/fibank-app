@@ -4,7 +4,7 @@ import { useAuth } from "@/hooks/useAuth";
 import {
   isLoginFormValid,
   validateLoginForm,
-} from "../features/auth/validators/validators";
+} from "@/features/auth/validators/validators";
 import { LoginFormValues } from "@/features/auth/validators/validators.types";
 
 const INITIAL_VALUES: LoginFormValues = { username: "", password: "" };

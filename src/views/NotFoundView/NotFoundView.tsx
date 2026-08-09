@@ -1,5 +1,5 @@
-import { Link } from 'react-router';
-import { notFoundViewStyles as styles } from './NotFoundView.styles';
+import { Link } from "react-router";
+import { notFoundViewStyles as styles } from "./NotFoundView.styles";
 
 export const NotFoundView = () => {
   return (
@@ -13,4 +13,4 @@ export const NotFoundView = () => {
   );
 };
 
-NotFoundView.displayName = 'NotFoundView';
+NotFoundView.displayName = "NotFoundView";

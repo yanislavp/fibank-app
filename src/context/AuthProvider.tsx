@@ -1,7 +1,7 @@
-import { useMemo, useState, type ReactNode } from 'react';
-import { AuthContext, type AuthContextValue } from './AuthContext';
+import { useMemo, useState, type ReactNode } from "react";
+import { AuthContext, type AuthContextValue } from "./AuthContext";
 
-const AUTH_SESSION_KEY = 'fibank.auth.username';
+const AUTH_SESSION_KEY = "fibank.auth.username";
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [username, setUsername] = useState<string | null>(() =>
@@ -27,4 +27,4 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 
-AuthProvider.displayName = 'AuthProvider';
+AuthProvider.displayName = "AuthProvider";

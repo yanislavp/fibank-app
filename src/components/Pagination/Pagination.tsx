@@ -1,8 +1,13 @@
-import { Button } from '@/components/Button';
-import { paginationStyles as styles } from './Pagination.styles';
-import { PaginationProps } from './Pagination.types';
+import { Button } from "@/components/Button";
+import { paginationStyles as styles } from "./Pagination.styles";
+import { PaginationProps } from "./Pagination.types";
 
-export const Pagination = ({ page, hasNext, hasPrevious, onPageChange }: PaginationProps) => {
+export const Pagination = ({
+  page,
+  hasNext,
+  hasPrevious,
+  onPageChange,
+}: PaginationProps) => {
   return (
     <div className={styles.container}>
       <Button
@@ -24,4 +29,4 @@ export const Pagination = ({ page, hasNext, hasPrevious, onPageChange }: Paginat
   );
 };
 
-Pagination.displayName = 'Pagination';
+Pagination.displayName = "Pagination";

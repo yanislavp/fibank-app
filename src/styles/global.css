@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "./tokens.css";
 
+@layer theme, base, components, utilities;
+
 @layer base {
   body {
     @apply bg-bg font-sans text-foreground;

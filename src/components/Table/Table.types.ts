@@ -1,5 +1,5 @@
-import type { ReactNode } from 'react';
-import type { Person } from '@/api/types';
+import type { ReactNode } from "react";
+import type { Person } from "@/api/types";
 
 export interface TableColumn {
   key: string;

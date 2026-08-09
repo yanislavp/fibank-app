@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import { createContext } from "react";
 
 export interface NetworkStatusContextValue {
   reportNetworkError: () => void;
@@ -6,6 +6,6 @@ export interface NetworkStatusContextValue {
   isOffline: boolean;
 }
 
-export const NetworkStatusContext = createContext<NetworkStatusContextValue | undefined>(
-  undefined,
-);
+export const NetworkStatusContext = createContext<
+  NetworkStatusContextValue | undefined
+>(undefined);

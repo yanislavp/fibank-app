@@ -49,11 +49,8 @@ export const usePeople = (): UsePeopleResult => {
     const cacheKey = `people.page.${page}`;
 
     (async () => {
-      // Yield to a microtask before touching state or the cache. This is
-      // what actually moves every setState call below out of the effect's
-      // synchronous call stack - even the cache-hit branch, which would
-      // otherwise run with no `await` before it.
       await Promise.resolve();
+
       if (ignore) return;
 
       const cached = readCache(cacheKey);

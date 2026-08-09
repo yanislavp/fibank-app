@@ -1,8 +1,8 @@
-import { useAuth } from '@/hooks/useAuth';
-import { useNavigate } from 'react-router';
-import { Button } from '@/components/Button';
-import { PeopleTable } from '@/features/people/PeopleTable';
-import { tableViewStyles as styles } from './TableView.styles';
+import { useAuth } from "@/hooks/useAuth";
+import { useNavigate } from "react-router";
+import { Button } from "@/components/Button";
+import { PeopleTable } from "@/features/people/PeopleTable";
+import { tableViewStyles as styles } from "./TableView.styles";
 
 export const TableView = () => {
   const { username, logout } = useAuth();
@@ -10,7 +10,7 @@ export const TableView = () => {
 
   const handleLogout = () => {
     logout();
-    navigate('/login');
+    navigate("/login");
   };
 
   return (
@@ -31,4 +31,4 @@ export const TableView = () => {
   );
 };
 
-TableView.displayName = 'TableView';
+TableView.displayName = "TableView";

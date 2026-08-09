@@ -1,1 +1,1 @@
-export { OfflineDialog } from './OfflineDialog';
+export { OfflineDialog } from "./OfflineDialog";

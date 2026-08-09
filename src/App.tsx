@@ -1,8 +1,8 @@
-import { BrowserRouter } from 'react-router';
-import { AuthProvider } from '@/context/AuthProvider';
-import { NetworkStatusProvider } from '@/context/NetworkStatusProvider';
-import { AppRouter } from '@/routes/AppRouter';
-import { OfflineDialog } from '@/components/OfflineDialog';
+import { BrowserRouter } from "react-router";
+import { AuthProvider } from "@/context/AuthProvider";
+import { NetworkStatusProvider } from "@/context/NetworkStatusProvider";
+import { AppRouter } from "@/routes/AppRouter";
+import { OfflineDialog } from "@/components/OfflineDialog";
 
 const App = () => {
   return (
@@ -17,6 +17,6 @@ const App = () => {
   );
 };
 
-App.displayName = 'App';
+App.displayName = "App";
 
 export default App;

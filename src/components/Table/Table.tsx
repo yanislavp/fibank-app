@@ -1,5 +1,5 @@
-import { tableStyles as styles } from './Table.styles';
-import { TableProps } from './Table.types';
+import { tableStyles as styles } from "./Table.styles";
+import { TableProps } from "./Table.types";
 
 export const Table = ({ columns, rows, getRowKey }: TableProps) => {
   return (
@@ -30,4 +30,4 @@ export const Table = ({ columns, rows, getRowKey }: TableProps) => {
   );
 };
 
-Table.displayName = 'Table';
+Table.displayName = "Table";

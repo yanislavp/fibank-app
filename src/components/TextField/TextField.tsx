@@ -1,7 +1,7 @@
-import { Form } from 'radix-ui';
-import { cn } from 'tailwind-variants';
-import { textFieldStyles as styles } from './TextField.styles';
-import type { TextFieldProps } from './TextField.types';
+import { Form } from "radix-ui";
+import { cn } from "tailwind-variants";
+import { textFieldStyles as styles } from "./TextField.styles";
+import type { TextFieldProps } from "./TextField.types";
 
 export const TextField = ({
   name,
@@ -9,7 +9,7 @@ export const TextField = ({
   error,
   className,
   ref,
-  ...rest
+  ...props
 }: TextFieldProps) => {
   return (
     <Form.Field name={name} className={styles.field}>
@@ -18,16 +18,12 @@ export const TextField = ({
         <input
           ref={ref}
           className={cn(styles.input, error && styles.inputError, className)}
-          {...rest}
+          {...props}
         />
       </Form.Control>
-      {error && (
-        <Form.Message forceMatch className={styles.message}>
-          {error}
-        </Form.Message>
-      )}
+      {error && <Form.Message className={styles.message}>{error}</Form.Message>}
     </Form.Field>
   );
 };
 
-TextField.displayName = 'TextField';
+TextField.displayName = "TextField";

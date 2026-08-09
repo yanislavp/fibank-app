@@ -19,7 +19,9 @@ export class ApiError extends Error {
 
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 
-export const fetchPeoplePage = async (page: number): Promise<PeopleResponse> => {
+export const fetchPeoplePage = async (
+  page: number,
+): Promise<PeopleResponse> => {
   let response: Response;
 
   try {

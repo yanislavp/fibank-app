@@ -1,2 +1,6 @@
-export { DialogContent } from './Dialog';
-export { DialogRoot, DialogTitle, DialogDescription } from './Dialog.primitives';
+export {
+  DialogContent,
+  Dialog,
+  DialogTitle,
+  DialogDescription,
+} from "./Dialog";

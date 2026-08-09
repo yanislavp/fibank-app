@@ -18,7 +18,6 @@
   --color-danger: #dc2626;
   --color-danger-soft: #fee2e2;
 
-
   --radius-md: 10px;
   --radius-lg: 20px;
   --radius-xl: 28px;
@@ -29,11 +28,4 @@
   --font-sans:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-
-  --text-caption: 0.8125rem; /* 13px - field errors, small helper text */
-  --text-caption--line-height: 1.4;
-  --text-body: 0.9375rem; /* 15px - secondary body copy, descriptions */
-  --text-body--line-height: 1.6;
-  --text-heading: 1.75rem; /* 28px - page-level headings */
-  --text-heading--line-height: 1.2;
 }

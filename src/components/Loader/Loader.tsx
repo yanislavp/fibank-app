@@ -1,7 +1,7 @@
-import { loaderStyles as styles } from './Loader.styles';
-import { LoaderProps } from './Loader.types';
+import { loaderStyles as styles } from "./Loader.styles";
+import { LoaderProps } from "./Loader.types";
 
-export const Loader = ({ label = 'Loading…' }: LoaderProps) => {
+export const Loader = ({ label = "Loading…" }: LoaderProps) => {
   return (
     <div className={styles.container} role="status" aria-live="polite">
       <span className={styles.spinner} aria-hidden />
@@ -10,4 +10,4 @@ export const Loader = ({ label = 'Loading…' }: LoaderProps) => {
   );
 };
 
-Loader.displayName = 'Loader';
+Loader.displayName = "Loader";

@@ -1,12 +1,19 @@
-import { Form } from 'radix-ui';
-import { Button } from '@/components/Button';
-import { TextField } from '@/components/TextField';
-import { useLoginForm } from '../../../hooks/useLoginForm';
-import { loginFormStyles as styles } from './LoginForm.styles';
+import { Form } from "radix-ui";
+import { Button } from "@/components/Button";
+import { TextField } from "@/components/TextField";
+import { useLoginForm } from "@/hooks/useLoginForm";
+import { loginFormStyles as styles } from "./LoginForm.styles";
 
 export const LoginForm = () => {
-  const { values, errors, touched, isValid, handleChange, handleBlur, handleSubmit } =
-    useLoginForm();
+  const {
+    values,
+    errors,
+    touched,
+    isValid,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+  } = useLoginForm();
 
   return (
     <Form.Root onSubmit={handleSubmit} className={styles.form} noValidate>
@@ -15,8 +22,8 @@ export const LoginForm = () => {
         label="Username"
         autoComplete="username"
         value={values.username}
-        onChange={handleChange('username')}
-        onBlur={handleBlur('username')}
+        onChange={handleChange("username")}
+        onBlur={handleBlur("username")}
         error={touched.username ? errors.username : null}
       />
       <TextField
@@ -25,8 +32,8 @@ export const LoginForm = () => {
         type="password"
         autoComplete="current-password"
         value={values.password}
-        onChange={handleChange('password')}
-        onBlur={handleBlur('password')}
+        onChange={handleChange("password")}
+        onBlur={handleBlur("password")}
         error={touched.password ? errors.password : null}
       />
       <Form.Submit asChild>
@@ -38,4 +45,4 @@ export const LoginForm = () => {
   );
 };
 
-LoginForm.displayName = 'LoginForm';
+LoginForm.displayName = "LoginForm";

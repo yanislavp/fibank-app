@@ -1,8 +1,15 @@
-import { useCallback, useMemo, useState, type ReactNode } from 'react';
-import { useOnlineStatus } from '@/hooks/useOnlineStatus';
-import { NetworkStatusContext, type NetworkStatusContextValue } from './NetworkStatusContext';
+import { useCallback, useMemo, useState, type ReactNode } from "react";
+import { useOnlineStatus } from "@/hooks/useOnlineStatus";
+import {
+  NetworkStatusContext,
+  type NetworkStatusContextValue,
+} from "./NetworkStatusContext";
 
-export const NetworkStatusProvider = ({ children }: { children: ReactNode }) => {
+export const NetworkStatusProvider = ({
+  children,
+}: {
+  children: ReactNode;
+}) => {
   const browserOnline = useOnlineStatus();
   const [fetchReportedOffline, setFetchReportedOffline] = useState(false);
 
@@ -14,8 +21,14 @@ export const NetworkStatusProvider = ({ children }: { children: ReactNode }) => 
     }
   }
 
-  const reportNetworkError = useCallback(() => setFetchReportedOffline(true), []);
-  const clearNetworkError = useCallback(() => setFetchReportedOffline(false), []);
+  const reportNetworkError = useCallback(
+    () => setFetchReportedOffline(true),
+    [],
+  );
+  const clearNetworkError = useCallback(
+    () => setFetchReportedOffline(false),
+    [],
+  );
 
   const value = useMemo<NetworkStatusContextValue>(
     () => ({
@@ -23,7 +36,12 @@ export const NetworkStatusProvider = ({ children }: { children: ReactNode }) => 
       reportNetworkError,
       clearNetworkError,
     }),
-    [browserOnline, fetchReportedOffline, reportNetworkError, clearNetworkError],
+    [
+      browserOnline,
+      fetchReportedOffline,
+      reportNetworkError,
+      clearNetworkError,
+    ],
   );
 
   return (
@@ -33,4 +51,4 @@ export const NetworkStatusProvider = ({ children }: { children: ReactNode }) => 
   );
 };
 
-NetworkStatusProvider.displayName = 'NetworkStatusProvider';
+NetworkStatusProvider.displayName = "NetworkStatusProvider";
